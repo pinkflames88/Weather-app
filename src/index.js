@@ -73,7 +73,6 @@ function dateBuilder(d) {
   return `${day} ${date} ${month} ${year}`;
 }
 
-
 function displayForecast(response) {
   let forecast = response.data.daily;
 
