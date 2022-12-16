@@ -47,7 +47,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+background-image: url('images/pink sun.jpg.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 35px;
 
   border: 2px solid rgba(42, 113, 219, 0.884);
