@@ -4,19 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  
+
         <title> weather app</title>
         <link rel="stylesheet" href="src/styles.css"/>
-
 
     </head>
     <body>
     <div class="card">
-
-             <header>
+        <header>
+             <form>
                 <div class="class"></div>
                  <input type="text" autocomplete="off" class="search-box" placeholder="search for a city..." />
-                 
-             </header>
+                 <div class="col-4">
+                      
+                      </div>
+                    </form>
+                </header>
              <main>
                  <section class="location">
                     <div class="city">London,GB</div>
@@ -38,18 +48,14 @@
                           <div class="float-right">
                             <strong id="temperature"></strong
                             ><span class="units"
-                              ><a href="#" id="celsius-url" class="active">°C</a> |
-                              <a href="#" id="fahrenheit-url">°F</a></span
+                              ><a href="#" id="celsius-link" class="active">°C</a> |
+                              <a href="#" id="fahrenheit-link">°F</a></span
                             >
-          
-                  <div class="col-5">
-                        <ul>
-                          <li>Humidity: <span id="humidity"></span>%</li>
-                          <li>Wind: <span id="wind"></span> m/h</li>
-                        </ul>
-                          </div>
+                            </span>
+                            </div>
                         </div>
-          
+                    
+                
          </main>
          <div class="card-footer"> Designed by Naomi G 
              <br> https://github.com/pinkflames88/Weather-app </br>
