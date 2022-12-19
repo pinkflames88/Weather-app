@@ -44,6 +44,7 @@ function setQuery(evt) {
   )}°c`;
 }
 
+
   function dateBuilder(d) {
     let months = [
       "January",
