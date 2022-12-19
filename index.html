@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-compatible" content="ie=edge">
-        <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-compatible" content="ie=edge" />
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-  
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
-        <title> weather app</title>
-        <link rel="stylesheet" href="src/styles.css"/>
-
-    </head>
-    <body>
+    <title>weather app</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
     <div class="card">
-        <header>
-             <form>
-                <div class="class"></div>
-                 <input type="text" autocomplete="off" class="search-box" placeholder="search for a city..." />
-                 <div class="col-4">
-                      
-                      </div>
-                    </form>
-                </header>
-             <main>
-                 <section class="location">
-                    <div class="city">London,GB</div>
-                    <div class="date">Thursday 1st January 2022</div>
-                  
-            
-                <div class="current">
-                  <div class="temp">23<span>°c</span></div>
-                  <div class="weather">sunny</div>
-                  <div class="hi-low">12° / 20°</div>
-                </div>
-                 </section>
-           <div class="row">
-                      <div class="col-4">
-                        <div class="clearfix weather-temperature">
-          
-                          <img src="http://openweathermap.org/img/wn/04d@2x.png"
-                           alt="Clear" id="icon" class="float-right" />
-                          <div class="float-right">
-                            <strong id="temperature"></strong
-                            ><span class="units"
-                              ><a href="#" id="celsius-link" class="active">°C</a> |
-                              <a href="#" id="fahrenheit-link">°F</a></span
-                            >
-                            </span>
-                            </div>
-                        </div>
-                    
-                
-         </main>
-         <div class="card-footer"> Designed by Naomi G 
-             <br> https://github.com/pinkflames88/Weather-app </br>
-         </footer>
+      <header>
+        <form>
+          <input
+            type="text"
+            autocomplete="off"
+            class="search-box"
+            placeholder="search for a city..."
+          />
+        </form>
+      </header>
+      <main>
+        <section class="location">
+          <div class="city">London,GB</div>
+          <div class="date">Thursday 1st January 2022</div>
+
+          <div class="current">
+            <div class="temp">23<span>°c</span></div>
+            <div class="weather">sunny</div>
+            <div class="hi-low">12° / 20°</div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-4">
+            <div class="clearfix weather-temperature">
+              <img
+                src="http://openweathermap.org/img/wn/04d@2x.png"
+                alt="Clear"
+                id="icon"
+                class="float-right"
+              />
+              <div class="float-right">
+                <strong id="temperature"></strong
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </main>
+      <div class="card-footer">
+        Designed by Naomi G <br />
+        https://github.com/pinkflames88/Weather-app <br />
+      </div>
     </div>
-        <script src="src/index.js"></script>
-    </body>
-</htm>
+    <script src="src/index.js"></script>
+  </body>
+</html>
+and then change the setQuery function to
+function setQuery(evt) {
+  if (evt.keyCode === 13) {
+    evt.preventDefault();
+
+    getResults(searchbox.value);
+  }
+}
